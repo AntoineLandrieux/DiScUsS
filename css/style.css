@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+    font: 20px sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #000;
+}
+
+html, main, section {
+    overflow: hidden;
+}
+
+#msg {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+button {
+    position: fixed;
+    z-index: inherit;
+    top: 50px;
+    left: 50px;
+    height: min(10vmin, 55px);
+    width: min(10vmin, 55px);
+    font-size: min(10vmin, 55px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 50%;
+    outline: none;
+    background: #eeeeee;
+}
+
+button:hover {
+    background: #bfbfbf;
+    transition: all .5s ease-in-out;
+}
+
+button.inactive {
+    transform: rotate(0);
+    transition: transform .5s ease-in-out;
+}
+
+button.active {
+    transform: rotate(-45deg);
+    transition: transform .5s ease-in-out;
+}
+
+nav {
+    position: fixed;
+    height: 100vh;
+    width: 40vw;
+    background: #111111ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+}
+
+nav.inactive {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+}
+
+nav.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .5s ease-in-out;
+}
+
+nav div a {
+    color: #fff;
+    font-size: 5vmin;
+    text-decoration: none;
+}
+
+nav div a::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    transform: scale(0);
+}
+
+nav div a:hover::after {
+    transform: scale(1);
+    transition: all .4s ease-in-out;
+}
+
+#title {
+    font-size: 10vmin;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#title::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #000;
+    transform: scale(0);
+}
+
+#title:hover::after {
+    transform: scale(1);
+    transition: all .4s ease-in-out;
+}
+
+
+main a {
+    font-size: 6vmin;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+main a:hover {
+    background: #bcbcbc;
+    transition: all .1s ease-in-out;
+}
+
+span {
+    font-size: 5vmin;
+}
+
+main, section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+}
+
+form * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vmin;
+}
+
+form input[type=submit]:hover {
+    background: #bfbfbf;
+}

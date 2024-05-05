@@ -1,0 +1,1 @@
+<?php $db = new PDO("mysql:host=localhost;dbname=discuss;charset=UTF8", "root", ""); ?>
